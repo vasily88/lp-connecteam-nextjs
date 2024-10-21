@@ -1,10 +1,10 @@
-import Image from "next/image";
+import HeboSection from "./components/HeboSection/HeboSection";
 
 export default function Home() {
   return (
     <div>
       <main>
-        main
+        <HeboSection />
       </main>
       <footer>
         footer
