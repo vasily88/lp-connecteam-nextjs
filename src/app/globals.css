@@ -4,3 +4,25 @@
   /* font-family: 'Inter', sans-serif;
   font-family: 'Merriweather', serif; */
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 500px;
+  display: block !important;
+}
+
+::-webkit-scrollbar-track {
+  background: #0098DA;
+  ;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9900;
+  border-radius: 500px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
