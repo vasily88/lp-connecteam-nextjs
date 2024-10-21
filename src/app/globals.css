@@ -5,6 +5,10 @@
   font-family: 'Merriweather', serif; */
 }
 
+:root {
+  --color1: #fff;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   border-radius: 500px;
@@ -25,4 +29,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
 }

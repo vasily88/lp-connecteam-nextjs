@@ -1,6 +1,34 @@
+:root {
+    --color1: #fff;
+}
+
 .heboSection {
     width: 100%;
     height: 920px;
     position: relative;
     overflow: hidden;
+}
+
+.heboSection img {
+    object-position: top;
+}
+
+.heboContainerText {
+    padding: 80px 0 0 388px;
+    width: 554px;
+    color: var(--color1);
+}
+
+.heboContainerText h1 {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 67px;
+    margin: 115px 0 0 0;
+}
+
+.heboContainerText p {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 23px;
+    margin: 32px 0 0 0;
 }

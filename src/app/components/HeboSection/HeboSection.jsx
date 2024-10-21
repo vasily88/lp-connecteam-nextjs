@@ -35,6 +35,7 @@ const HeboSection = () => {
         loadImages();
     }, [])
 
+    console.log(dataContent);
     return (
         <section className='heboSection'>
             {dataImages ?
@@ -44,10 +45,33 @@ const HeboSection = () => {
                     fill
                     style={{ objectFit: 'cover' }}
                 />
-                : null}
+                : ''}
 
-            <div>
-                {/* {dataContent ? JSON.stringify(dataContent) : null} */}
+            <div className='heboContainerText relative'>
+
+                <Image
+                    src='./images/logo_white.svg'
+                    alt="logo"
+                    priority={true}
+                    width={321}
+                    height={60}
+                />
+
+                {dataContent ?
+                    <>
+                        <h1 className='__className_ddd55e'>
+                            {dataContent.content.hero.title}
+                        </h1>
+                        <p>
+                            {dataContent.content.hero.subtitle}
+                        </p>
+                    </>
+                    : ''}
+
+            </div>
+
+            <div className='relative'>
+
             </div>
         </section>
     )
