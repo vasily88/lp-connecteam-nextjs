@@ -1,24 +1,32 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  box-sizing: content-box;
+  direction: ltr;
   transition: 0.3s all;
 }
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 a {
-    color: inherit;
+  color: inherit;
 }
 
 button {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
+
 :root {
   --color1: #fff;
 }

@@ -69,16 +69,16 @@ const HeboSection = () => {
                         </p>
 
                         {/* Hebo Buttons */}
-                        <div className="heboButtons">
+                        <div className="heboButtons flex-center">
                             {
-                            dataContent.content.hero.links.map((button,index) => {
-                                return (
-                                    <Buttons key={index} href={button.href} label={button.label} primary={button.primary} />
-                                )
-                                
-                            })
+                                dataContent.content.hero.links.map((button, index) => {
+                                    return (
+                                        <Buttons key={index} href={button.href} label={button.label} primary={button.primary} icon={button.icon} />
+                                    )
+
+                                })
                             }
-                            
+
                         </div>
                     </>
                     : ''}

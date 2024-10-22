@@ -1,3 +1,54 @@
-.buttons{
-    background-color: red;
+:root {
+    --color1: #fff;
+    --color2: #FF9900;
+    --color3: #ED8E00;
 }
+
+.button {
+    padding: 18px 24px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+.button span {
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 700;
+}
+
+.button-arrow {
+    background-color: var(--color2);
+    gap: 12px;
+}
+
+.button-arrow:hover {
+    background-color: var(--color3);
+}
+
+.button-arrow span {
+    color: var(--color1);
+}
+
+.button-icon {
+    backdrop-filter: blur(16px);
+    box-shadow: 0px 2px 4px 0px #00000012, 0px 3px 12px 0px #00000012;
+    border: 2px solid #FF9900;
+    gap: 8px;
+}
+
+.button-icon:hover .buttonIcon {
+    display: none;
+}
+
+.button-icon:hover .buttonArrow {
+    display: block !important;
+}
+
+.button-icon span {
+    color: var(--color2);
+}
+
+
+.buttonIcon {}
+
+.buttonArrow {}
