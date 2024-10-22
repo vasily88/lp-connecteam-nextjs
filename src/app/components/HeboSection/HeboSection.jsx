@@ -4,6 +4,7 @@ import useDeviceType from '../../utils/useDeviseType';
 import { fetchDataContent } from '../../utils/fetchData';
 import { fetchImages } from '../../utils/fetchData';
 import Buttons from '../Buttons/Buttons';
+import ButtonArrowScroll from '../Buttons/ButtonArrowScroll';
 import Image from 'next/image';
 import './HeboSection.css';
 
@@ -82,11 +83,10 @@ const HeboSection = () => {
                         </div>
                     </>
                     : ''}
+
+                <ButtonArrowScroll />
             </div>
 
-            <div className='relative'>
-
-            </div>
         </section>
     )
 }

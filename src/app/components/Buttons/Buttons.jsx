@@ -28,8 +28,7 @@ const Buttons = ({ href, label, primary, icon }) => {
       </span>
 
       <Image
-        className='buttonArrow'
-        style={{ display: icon ? 'none' : 'block' }}
+        className={icon ? 'buttonArrow buttonArrow-icon' : 'buttonArrow'}
         src={icon ? `./images/arrow-2.svg` : `./images/arrow.svg`}
         alt='arrow'
         priority={true}

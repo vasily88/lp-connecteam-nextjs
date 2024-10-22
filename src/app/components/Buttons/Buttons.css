@@ -37,18 +37,26 @@
 }
 
 .button-icon:hover .buttonIcon {
-    display: none;
+    width: 0;
 }
 
 .button-icon:hover .buttonArrow {
-    display: block !important;
+    display: block;
+    width: 0;
+    animation: 0.3s moveArrow linear forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes moveArrow{
+    100%{
+        width: 21px;
+    }
 }
 
 .button-icon span {
     color: var(--color2);
 }
 
-
-.buttonIcon {}
-
-.buttonArrow {}
+.buttonArrow.buttonArrow-icon {
+    display: none;
+}

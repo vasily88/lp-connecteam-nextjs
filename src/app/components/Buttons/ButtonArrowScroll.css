@@ -1,0 +1,30 @@
+.btnArrowScroll {
+  width: 42px;
+  height: 40px;
+  gap: 0;
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  background: #ffffff03;
+  overflow: hidden;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 130px 0 0 0;
+}
+.btnArrowScroll img {
+  margin-top: -1px;
+  animation: 2s arrowAnimation linear infinite;
+  position: relative;
+}
+
+@keyframes arrowAnimation {
+  0%, 70%, 100% {
+    top: 0;
+  }
+  30% {
+    top: -2px;
+  }
+  50% {
+    top: 2px;
+  }
+}
+
