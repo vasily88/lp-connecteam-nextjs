@@ -3,7 +3,13 @@ const nextConfig = {
     // output: 'export',
     // assetPrefix: './',
     images: {
-        domains: ['connecteam.com'], // Add your image domain here
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'connecteam.com',
+                pathname: '/**',
+            },
+        ],
     },
 };
 

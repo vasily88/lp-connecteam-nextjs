@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import useDeviceType from '../../utils/useDeviseType';
 import { fetchDataContent } from '../../utils/fetchData';
 import { fetchImages } from '../../utils/fetchData';
+import Buttons from '../Buttons/Buttons';
 import Image from 'next/image';
 import './HeboSection.css';
 
@@ -62,12 +63,25 @@ const HeboSection = () => {
                         <h1 className='__className_ddd55e'>
                             {dataContent.content.hero.title}
                         </h1>
+
                         <p>
                             {dataContent.content.hero.subtitle}
                         </p>
+
+                        {/* Hebo Buttons */}
+                        <div className="heboButtons">
+                            {
+                            dataContent.content.hero.links.map((button,index) => {
+                                return (
+                                    <Buttons key={index} href={button.href} label={button.label} primary={button.primary} />
+                                )
+                                
+                            })
+                            }
+                            
+                        </div>
                     </>
                     : ''}
-
             </div>
 
             <div className='relative'>
