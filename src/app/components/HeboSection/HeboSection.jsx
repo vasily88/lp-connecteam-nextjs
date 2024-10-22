@@ -1,30 +1,20 @@
 'use client'
 import { useEffect, useState } from 'react';
-import useDeviceType from '../../utils/useDeviseType';
-import { fetchDataContent } from '../../utils/fetchData';
 import { fetchImages } from '../../utils/fetchData';
+
+import useDeviceType from '../../utils/useDeviseType';
 import Buttons from '../Buttons/Buttons';
 import ButtonArrowScroll from '../Buttons/ButtonArrowScroll';
 import Image from 'next/image';
 import './HeboSection.css';
 
-const HeboSection = () => {
+const HeboSection = ({ title, subtitle, links }) => {
+
+    const [dataImages, setDataImages] = useState(null);
 
     const isMobile = useDeviceType();
 
-    const [dataContent, setDataContent] = useState(null);
-    const [dataImages, setDataImages] = useState(null);
-
     useEffect(() => {
-
-        // Load Content
-        async function loadContent() {
-            const url = 'https://connecteam.com/static/frontend-home-task/data/home.json';
-            const result = await fetchDataContent(url);
-            setDataContent(result);
-        }
-        loadContent();
-
         // Load Images
         async function loadImages() {
             const urls = [
@@ -37,7 +27,6 @@ const HeboSection = () => {
         loadImages();
     }, [])
 
-    console.log(dataContent);
     return (
         <section className='heboSection'>
             {dataImages ?
@@ -59,30 +48,28 @@ const HeboSection = () => {
                     height={60}
                 />
 
-                {dataContent ?
-                    <>
-                        <h1 className='__className_ddd55e'>
-                            {dataContent.content.hero.title}
-                        </h1>
 
-                        <p>
-                            {dataContent.content.hero.subtitle}
-                        </p>
+                <h1 className='__className_ddd55e'>
+                    {title}
+                </h1>
 
-                        {/* Hebo Buttons */}
-                        <div className="heboButtons flex-center">
-                            {
-                                dataContent.content.hero.links.map((button, index) => {
-                                    return (
-                                        <Buttons key={index} href={button.href} label={button.label} primary={button.primary} icon={button.icon} />
-                                    )
+                <p>
+                    {subtitle}
+                </p>
 
-                                })
-                            }
+                {/* Hebo Buttons */}
+                <div className="heboButtons flex-center">
+                    {
+                        links.map((button, index) => {
+                            return (
+                                <Buttons key={index} href={button.href} label={button.label} primary={button.primary} icon={button.icon} />
+                            )
 
-                        </div>
-                    </>
-                    : ''}
+                        })
+                    }
+
+                </div>
+
 
                 <ButtonArrowScroll />
             </div>

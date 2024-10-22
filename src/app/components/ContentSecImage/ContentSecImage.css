@@ -1,0 +1,9 @@
+:root {
+    --color1: #fff;
+}
+
+.contentSection {
+    max-width: 1144px;
+    margin: 0 auto;
+    gap: 40px;
+}

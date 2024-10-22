@@ -23,7 +23,7 @@ const Buttons = ({ href, label, primary, icon }) => {
         : null}
 
 
-      <span>
+      <span className='__className_ddd55e'>
         {label}
       </span>
 

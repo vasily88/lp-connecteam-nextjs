@@ -28,7 +28,14 @@ export async function fetchImages(names) {
   }
 
   try {
-    const urls = names.map(name => urlsName[name]);
+    const validNames = names.filter(name => name.trim() !== '');
+
+    if (validNames.length === 0) {
+      console.warn("No valid image names provided");
+      return null;
+    }
+
+    const urls = validNames.map(name => urlsName[name]);
     const imagePromises = urls.map(async (url, index) => {
       const response = await fetch(url);
       if (!response.ok) {

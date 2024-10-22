@@ -10,6 +10,19 @@
   cursor: pointer;
   margin: 130px 0 0 0;
 }
+
+.scrollArrowHover {
+  display: none;
+}
+
+.btnArrowScroll:hover .scrollArrow {
+  display: none;
+}
+
+.btnArrowScroll:hover .scrollArrowHover {
+  display: block;
+}
+
 .btnArrowScroll img {
   margin-top: -1px;
   animation: 2s arrowAnimation linear infinite;
@@ -17,14 +30,19 @@
 }
 
 @keyframes arrowAnimation {
-  0%, 70%, 100% {
+
+  0%,
+  20%,
+  60%,
+  100% {
     top: 0;
   }
-  30% {
-    top: -2px;
+
+  35% {
+    top: -3px;
   }
-  50% {
-    top: 2px;
+
+  45% {
+    top: 3px;
   }
 }
-
