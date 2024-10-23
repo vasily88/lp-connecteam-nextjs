@@ -1,3 +1,24 @@
 :root {
     --color1: #fff;
 }
+
+.menuBtn {
+    gap: 6px;
+    cursor: pointer;
+}
+
+.menuBtn span {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 19px;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    height: 115px;
+}
+
+.menu ul {
+    gap: 86px;
+}

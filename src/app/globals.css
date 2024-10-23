@@ -9,9 +9,9 @@
   transition: 0.3s all;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 a {
   color: inherit;
@@ -64,4 +64,8 @@ ul {
 
 .absolute {
   position: absolute;
+}
+
+.contentSectionContainer {
+  position: relative;
 }

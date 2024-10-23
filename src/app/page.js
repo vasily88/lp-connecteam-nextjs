@@ -37,7 +37,7 @@ export default function Home() {
 
               {/* Menu */}
               <Menu 
-              
+                items = {dataContent.content.items}
               />
 
               {/* Repudiandae */}
@@ -46,7 +46,7 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/repudiandae.json'
                 directionLeft = {true}
                 imageMobile = 'repudiandae-small'
-                link = {dataContent.content.items.find(item => item.name === "repudiandae").linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "repudiandae") ? dataContent.content.items.find(item => item.name === "repudiandae").linkLabel : ''}
                 iconArrow = 'arrow-3'
                 color='#7A00DA' 
                 backgroundIconTitle="#F8EFFF"
@@ -60,7 +60,7 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/sit-at-enim.json'
                 directionLeft = {false}
                 imageMobile = 'sit-et-enim-small'
-                link = {dataContent.content.items.find(item => item.name === "sit-at-enim").linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "sit-at-enim") ? dataContent.content.items.find(item => item.name === "sit-at-enim").linkLabel : ''}
                 iconArrow = 'arrow-4'
                 color='#00CDDA'
                 backgroundIconTitle="#EFFEFF"
@@ -74,8 +74,8 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/dolore-ipsum.json'
                 imageMobile = 'dolore-ipsum-small'
                 imageDesktop = 'dolore-ipsum-large'
-                link = {dataContent.content.items.find(item => item.name === "dolore-ipsum").linkLabel}
-                buttons = {dataContent.content.items.find(item => item.name === "dolore-ipsum").additionalLinks}
+                link = {dataContent.content.items.find(item => item.name === "dolore-ipsum") ? dataContent.content.items.find(item => item.name === "dolore-ipsum").linkLabel : ''}
+                buttons = {dataContent.content.items.find(item => item.name === "dolore-ipsum") ? dataContent.content.items.find(item => item.name === "dolore-ipsum").additionalLinks : ''}
                 iconArrow = 'arrow'
                 color='#0098DA'
                 sectionBg = '#004C6C'
@@ -87,7 +87,7 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/praesentium-aspernatur.json'
                 directionLeft = {true}
                 imageMobile = 'praesentium-aspernatur-small'
-                link = {dataContent.content.items.find(item => item.name === "praesentium-aspernatur").linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "praesentium-aspernatur") ? dataContent.content.items.find(item => item.name === "praesentium-aspernatur").linkLabel : ''}
                 iconArrow = 'arrow-5'
                 color='#DA0069'
                 backgroundIconTitle="#FFEFF7"
