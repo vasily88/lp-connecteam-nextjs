@@ -62,7 +62,14 @@ const HeboSection = ({ title, subtitle, links }) => {
                     {
                         links.map((button, index) => {
                             return (
-                                <Buttons key={index} href={button.href} label={button.label} primary={button.primary} icon={button.icon} />
+                                <Buttons
+                                    key={index}
+                                    href={button.href}
+                                    label={button.label}
+                                    primary={button.primary}
+                                    icon={button.icon}
+                                    nameArrowIcon="arrow-2"
+                                />
                             )
 
                         })

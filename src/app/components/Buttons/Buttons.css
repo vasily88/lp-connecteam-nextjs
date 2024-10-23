@@ -2,6 +2,8 @@
     --color1: #fff;
     --color2: #FF9900;
     --color3: #ED8E00;
+    --color-0098DA: #0098DA;
+    --color-047fb4: #047fb4;
 }
 
 .button {
@@ -37,18 +39,19 @@
 }
 
 .button-icon:hover .buttonIcon {
-    width: 0;
+    /* width: 0; */
+    display: none;
 }
 
 .button-icon:hover .buttonArrow {
     display: block;
-    width: 0;
+    /* width: 0;
     animation: 0.3s moveArrow linear forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.3s; */
 }
 
-@keyframes moveArrow{
-    100%{
+@keyframes moveArrow {
+    100% {
         width: 21px;
     }
 }
@@ -59,4 +62,20 @@
 
 .buttonArrow.buttonArrow-icon {
     display: none;
+}
+
+.Dolore-ipsum .button-arrow {
+    background-color: var(--color-0098DA);
+}
+
+.Dolore-ipsum .button-arrow:hover {
+    background-color: var(--color-047fb4);
+}
+
+.Dolore-ipsum .button-icon {
+    border: 2px solid var(--color-0098DA);
+}
+
+.Dolore-ipsum .button-icon span {
+    color: var(--color-0098DA);
 }

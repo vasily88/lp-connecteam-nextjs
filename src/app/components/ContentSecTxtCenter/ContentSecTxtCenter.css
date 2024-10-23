@@ -1,0 +1,87 @@
+:root {
+    --color1: #fff;
+}
+
+.contentSectionTxt {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 80px 0;
+}
+
+.containerImageCenter {
+    position: absolute;
+    width: 1030px;
+    height: 1030px;
+    overflow: hidden;
+    border-radius: 100%;
+    top: -160px;
+    right: -340px;
+    filter: opacity(0.06);
+
+}
+
+/* .containerImageCenter img {} */
+
+.containerTextCenter {
+    width: 1144px;
+    margin: 64px auto;
+    color: var(--color1);
+}
+
+.conatinerTitleCenter {
+    flex-direction: column;
+    gap: 18px;
+}
+
+.titleImageCenter {
+    width: 120px;
+    height: 120px;
+    border-radius: 220px;
+}
+
+.titleWrapperCenter {
+    flex-direction: column;
+    gap: 4px;
+}
+
+.titleWrapperCenter p {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.19em;
+    color: #9CB8C3;
+    text-transform: uppercase;
+}
+
+.titleWrapperCenter h2 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 42px;
+}
+
+.containerParagraphTxt {
+    margin: 36px 0 0 0;
+    text-align: center;
+    gap: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerParagraphTxt p {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.doloreHr {
+    width: 100%;
+    height: 2px;
+    border-radius: 38px;
+    background: #FFFFFF14;
+    margin: 36px 0;
+}
+
+.wrapperButtons {
+    gap: 18px;
+}

@@ -65,7 +65,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                             {parse(dataContent.description)}
                         </div>
 
-                        <a href={dataContent.heroLink.href} label={dataContent.heroLink.label} className="conatinerLink flex-center-left">
+                        <a href={dataContent.heroLink.href} label={dataContent.heroLink.label} className="conatinerLink flex-center-left" target="_blank">
                             <span className='__className_ddd55e' style={{ color }}>{link}</span>
                             <Image
                                 src={`./images/${iconArrow}.svg`}

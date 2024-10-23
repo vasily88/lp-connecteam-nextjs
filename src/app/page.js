@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { fetchDataContent } from './utils/fetchData';
 import ContentSecImage from "./components/ContentSecImage/ContentSecImage";
+import ContentSecTxtCenter from "./components/ContentSecTxtCenter/ContentSecTxtCenter";
 import HeboSection from "./components/HeboSection/HeboSection";
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/repudiandae.json'
                 directionLeft = {true}
                 imageMobile = 'repudiandae-small'
-                link = {dataContent.content.items[0].linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "repudiandae").linkLabel}
                 iconArrow = 'arrow-3'
                 color='#7A00DA' 
                 backgroundIconTitle="#F8EFFF"
@@ -53,12 +54,25 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/sit-at-enim.json'
                 directionLeft = {false}
                 imageMobile = 'sit-et-enim-small'
-                link = {dataContent.content.items[1].linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "sit-at-enim").linkLabel}
                 iconArrow = 'arrow-4'
                 color='#00CDDA'
                 backgroundIconTitle="#EFFEFF"
                 backgroundIconImage="#D6FCFF"
                 positionLogoImage = 'bottom left'
+              />
+
+              {/* Dolore ipsum */}
+              <ContentSecTxtCenter
+                name = 'Dolore-ipsum'
+                contentUrl='https://connecteam.com/static/frontend-home-task/data/dolore-ipsum.json'
+                imageMobile = 'dolore-ipsum-small'
+                imageDesktop = 'dolore-ipsum-large'
+                link = {dataContent.content.items.find(item => item.name === "dolore-ipsum").linkLabel}
+                buttons = {dataContent.content.items.find(item => item.name === "dolore-ipsum").additionalLinks}
+                iconArrow = 'arrow'
+                color='#0098DA'
+                sectionBg = '#004C6C'
               />
 
               {/* Praesentium aspernatur */}
@@ -67,7 +81,7 @@ export default function Home() {
                 contentUrl='https://connecteam.com/static/frontend-home-task/data/praesentium-aspernatur.json'
                 directionLeft = {true}
                 imageMobile = 'praesentium-aspernatur-small'
-                link = {dataContent.content.items[3].linkLabel}
+                link = {dataContent.content.items.find(item => item.name === "praesentium-aspernatur").linkLabel}
                 iconArrow = 'arrow-5'
                 color='#DA0069'
                 backgroundIconTitle="#FFEFF7"

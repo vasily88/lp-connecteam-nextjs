@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import './Buttons.css';
 
-const Buttons = ({ href, label, primary, icon }) => {
+const Buttons = ({ href, label, primary = '', icon, nameArrowIcon }) => {
   return (
     <a
       href={href}
@@ -29,7 +29,7 @@ const Buttons = ({ href, label, primary, icon }) => {
 
       <Image
         className={icon ? 'buttonArrow buttonArrow-icon' : 'buttonArrow'}
-        src={icon ? `./images/arrow-2.svg` : `./images/arrow.svg`}
+        src={icon ? `./images/${nameArrowIcon}.svg` : `./images/arrow.svg`}
         alt='arrow'
         priority={true}
         width={21}
