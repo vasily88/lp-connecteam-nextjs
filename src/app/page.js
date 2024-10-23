@@ -1,9 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { fetchDataContent } from './utils/fetchData';
+import HeboSection from "./components/HeboSection/HeboSection";
 import ContentSecImage from "./components/ContentSecImage/ContentSecImage";
 import ContentSecTxtCenter from "./components/ContentSecTxtCenter/ContentSecTxtCenter";
-import HeboSection from "./components/HeboSection/HeboSection";
+import Menu from "./components/Menu/Menu";
 
 export default function Home() {
 
@@ -33,6 +34,11 @@ export default function Home() {
           />
 
           <div className="contentSectionContainer">
+
+              {/* Menu */}
+              <Menu 
+              
+              />
 
               {/* Repudiandae */}
               <ContentSecImage

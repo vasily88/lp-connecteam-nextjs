@@ -38,7 +38,7 @@ const ContentSecTxtCenter = ({ contentUrl, imageDesktop = '', imageMobile = '', 
     }, [])
 
     return (
-        <section style={{ background: sectionBg }} className={`contentSectionTxt flex-center ${name}`}>
+        <section id={name} style={{ background: sectionBg }} className={`contentSectionTxt flex-center ${name}`}>
 
             {dataImages ?
                 <div className="containerImageCenter">

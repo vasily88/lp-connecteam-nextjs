@@ -37,7 +37,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
     }, [])
 
     return (
-        <section className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
+        <section id={name} className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
 
             {dataContent ? (
                 <>
@@ -48,7 +48,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                             <div className="titleImage flex-center" style={{ background: backgroundIconTitle }}>
                                 <Image
                                     src={`./images/${dataContent.icon}.svg`}
-                                    alt="logo internet"
+                                    alt={`logo ${name}`}
                                     priority={true}
                                     width={36}
                                     height={36}
@@ -83,7 +83,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                         <div className="containerImage">
                             <Image
                                 src={dataImages.image1}
-                                alt="Repudiandae image"
+                                alt={`${name} image`}
                                 priority={true}
                                 width={440}
                                 height={440}
