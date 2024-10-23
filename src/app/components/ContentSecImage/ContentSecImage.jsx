@@ -7,7 +7,7 @@ import { fetchImages } from '../../utils/fetchData';
 import Image from 'next/image';
 import './ContentSecImage.css';
 
-const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMobile = '', link, iconArrow, color }) => {
+const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMobile = '', link, iconArrow, color, name, positionLogoImage, backgroundIconTitle, backgroundIconImage }) => {
 
     // const isMobile = useDeviceType();
 
@@ -37,15 +37,15 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
     }, [])
 
     return (
-        <section className='contentSection flex-center'>
+        <section className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
 
             {dataContent ? (
                 <>
                     <div className="containerText">
 
                         {/* Container Title */}
-                        <div className="conatinerTitle">
-                            <div className="titleImage">
+                        <div className="conatinerTitle flex-center-left">
+                            <div className="titleImage flex-center" style={{ background: backgroundIconTitle }}>
                                 <Image
                                     src={`./images/${dataContent.icon}.svg`}
                                     alt="logo internet"
@@ -56,7 +56,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                             </div>
                             <div className="titleWrapper">
                                 <p>{dataContent.label}</p>
-                                <h2>{dataContent.title}</h2>
+                                <h2 className='__className_ddd55e' style={{ color }}>{dataContent.title}</h2>
                             </div>
                         </div>
 
@@ -65,8 +65,8 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                             {parse(dataContent.description)}
                         </div>
 
-                        <a href="" className="conatinerLink">
-                            <span>{link}</span>
+                        <a href={dataContent.heroLink.href} label={dataContent.heroLink.label} className="conatinerLink flex-center-left">
+                            <span className='__className_ddd55e' style={{ color }}>{link}</span>
                             <Image
                                 src={`./images/${iconArrow}.svg`}
                                 alt="arrow"
@@ -88,7 +88,8 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                                 width={440}
                                 height={440}
                             />
-                            <div className="conatinerImageLogo">
+                            <div className={`conatinerImageLogo flex-center ${positionLogoImage}`}>
+                                <div className='bgLogo' style={{ background: backgroundIconImage }}></div>
                                 <Image
                                     src={`./images/${dataContent.icon}.svg`}
                                     alt="logo internet"
