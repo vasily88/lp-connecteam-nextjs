@@ -37,7 +37,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
     }, [])
 
     return (
-        <section id={name} className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
+        <section id={name.toLowerCase()} className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
 
             {dataContent ? (
                 <>

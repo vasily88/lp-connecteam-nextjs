@@ -8,7 +8,7 @@ const ButtonArrowScroll = () => {
   return (
 
     <Link
-      to="Repudiandae"
+      to="menu"
       smooth={true}
       duration={500}
     >
