@@ -1,7 +1,7 @@
 :root {
     --color1: #fff;
     --color2: #FF9900;
-    --color3: #ED8E00;
+    --color-ED8E00: #ED8E00;
     --color-0098DA: #0098DA;
     --color-047fb4: #047fb4;
 }
@@ -24,7 +24,7 @@
 }
 
 .button-arrow:hover {
-    background-color: var(--color3);
+    background-color: var(--color-ED8E00);
 }
 
 .button-arrow span {

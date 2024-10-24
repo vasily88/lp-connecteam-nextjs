@@ -4,6 +4,7 @@ import { fetchDataContent } from './utils/fetchData';
 import HeboSection from "./components/HeboSection/HeboSection";
 import ContentSecImage from "./components/ContentSecImage/ContentSecImage";
 import ContentSecTxtCenter from "./components/ContentSecTxtCenter/ContentSecTxtCenter";
+import Footer from "./components/Footer/Footer";
 import Menu from "./components/Menu/Menu";
 
 export default function Home() {
@@ -101,7 +102,11 @@ export default function Home() {
         : ''}
 
       </main>
-      <footer></footer>
+      <footer>
+          <Footer 
+            contentUrl='https://connecteam.com/static/frontend-home-task/data/footer.json'
+          />
+      </footer>
     </div>
   );
 }

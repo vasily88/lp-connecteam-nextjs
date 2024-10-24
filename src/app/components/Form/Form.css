@@ -1,0 +1,79 @@
+:root {
+    --color1: #fff;
+    --color-ED8E00: #ED8E00;
+}
+
+.btnSubmit {
+    padding: 18px 24px;
+    border-radius: 32px;
+    overflow: hidden;
+    background-color: var(--color2);
+    gap: 12px;
+    cursor: pointer;
+    margin: 18px 0 0 0;
+}
+
+.btnSubmit:hover {
+    background-color: var(--color-ED8E00);
+}
+
+.btnSubmit span {
+    font-size: 19px;
+    line-height: 19px;
+    font-weight: 700;
+    color: var(--color1);
+}
+
+.messageForm {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0 0 0;
+    border: 2px solid var(--color-ED8E00);
+    padding: 10px;
+    color: #000;
+    border-radius: 32px;
+}
+
+.messageForm.success {
+    background: var(--color-ED8E00);
+    color: #fff;
+}
+
+.field {
+    position: relative;
+    width: 341px;
+    height: 48px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    /* padding: 16px 24px 16px 24px; */
+    border: 1px solid #EAEAEA
+}
+
+.label {
+    position: absolute;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 13px;
+    top: -7px;
+    left: 24px;
+    color: #242424;
+}
+
+.input {
+    position: absolute;
+    left: 24px;
+    top: 13px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+    width: calc(100% - 48px);
+}
+
+.containerFields {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 18px;
+    margin: 18px 0 0 0;
+}

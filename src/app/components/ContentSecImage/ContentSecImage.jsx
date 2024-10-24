@@ -5,11 +5,10 @@ import parse from 'html-react-parser';
 import { fetchDataContent } from '../../utils/fetchData';
 import { fetchImages } from '../../utils/fetchData';
 import Image from 'next/image';
+import ButtonHeroLink from '../Buttons/ButtonHeroLink';
 import './ContentSecImage.css';
 
 const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMobile = '', link, iconArrow, color, name, positionLogoImage, backgroundIconTitle, backgroundIconImage }) => {
-
-    // const isMobile = useDeviceType();
 
     const [dataContent, setDataContent] = useState(null);
     const [dataImages, setDataImages] = useState(null);
@@ -65,16 +64,13 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                             {parse(dataContent.description)}
                         </div>
 
-                        <a href={dataContent.heroLink.href} label={dataContent.heroLink.label} className="conatinerLink flex-center-left" target="_blank">
-                            <span className='__className_ddd55e' style={{ color }}>{link}</span>
-                            <Image
-                                src={`./images/${iconArrow}.svg`}
-                                alt="arrow"
-                                priority={true}
-                                width={21}
-                                height={19}
-                            />
-                        </a>
+                        <ButtonHeroLink
+                            href={dataContent.heroLink.href}
+                            label={dataContent.heroLink.label}
+                            color={color}
+                            nameLink={link}
+                            nameArrow={iconArrow}
+                        />
 
                     </div>
 

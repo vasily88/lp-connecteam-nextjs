@@ -28,6 +28,7 @@ ul {
 
 :root {
   --color1: #fff;
+  --color-F8F8F8: #F8F8F8;
 }
 
 ::-webkit-scrollbar {
@@ -68,4 +69,9 @@ ul {
 
 .contentSectionContainer {
   position: relative;
+}
+
+footer {
+  margin: 70px 0 0 0;
+  background: var(--color-F8F8F8);
 }

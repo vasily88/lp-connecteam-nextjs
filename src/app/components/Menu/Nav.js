@@ -2,7 +2,6 @@ import { Link } from 'react-scroll';
 import Image from 'next/image';
 
 const Nav = ({name,nameMenu, icon, color}) => {
-console.log("nameMenu:", nameMenu)
 
     return (
         <li>
