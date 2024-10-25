@@ -104,19 +104,49 @@
     .menu ul {
         gap: 24px;
         width: fit-content;
+        padding: 0 24px;
+        box-sizing: border-box;
     }
 
     .menuBtn {
         gap: 6px;
+        width: max-content;
     }
 
     .nav {
         height: 41px;
         overflow-x: scroll;
         overflow-y: hidden;
+        justify-content: flex-start;
+    }
+
+    .nav::-webkit-scrollbar {
+        display: none !important;
     }
 
     .menu {
         height: 41px;
+    }
+
+    .menuBtn:hover {
+        background: inherit !important;
+    }
+
+    .menuLogo {
+        height: 80px;
+    }
+
+    .menuLogoImage {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    .menu.sticky .nav {
+        height: 41px;
+    }
+
+    .menu.sticky {
+        height: 121px;
     }
 }

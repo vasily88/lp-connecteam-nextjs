@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import useDeviceType from '../../utils/useDeviseType';
 import Nav from './Nav';
 import './Menu.css';
 
@@ -8,6 +9,8 @@ const Menu = ({ items }) => {
 
     const menuRef = useRef(null);
     const [isSticky, setIsSticky] = useState(false);
+
+    const isMobile = useDeviceType();
 
     const menuDetails = [
         {
@@ -63,8 +66,8 @@ const Menu = ({ items }) => {
                     <Image
                         src={`./images/logo.svg`}
                         alt='logo menu'
-                        width={224}
-                        height={42}
+                        width={isMobile ? 171 : 224}
+                        height={isMobile ? 32 : 42}
                     />
                 </div>
             </div>
