@@ -9,6 +9,7 @@ const Nav = ({name,nameMenu, icon, color}) => {
             to={nameMenu}
             smooth={true}
             duration={500}
+            offset={-100}
             >
                 <button aria-label={`button ${name}`} className='menuBtn flex-center' style={{background:color+12}} aria-controls="menu">
                     <Image

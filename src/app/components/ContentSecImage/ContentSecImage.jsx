@@ -13,6 +13,7 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
     const [dataContent, setDataContent] = useState(null);
     const [dataImages, setDataImages] = useState(null);
 
+    // Device Type
     const isMobile = useDeviceType();
 
     useEffect(() => {
@@ -38,7 +39,10 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
     }, [])
 
     return (
-        <section id={name.toLowerCase()} className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}>
+        <section
+            id={name.toLowerCase()}
+            className={directionLeft ? `contentSection flex-center ${name} directionLeft` : `contentSection flex-center ${name} directionRight`}
+        >
 
             {dataContent ? (
                 <>
