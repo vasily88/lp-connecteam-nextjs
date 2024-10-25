@@ -42,6 +42,8 @@ const Footer = ({ contentUrl }) => {
                         />
                     </div>
 
+                    <div className="hrFooter"></div>
+
                     <div className="footerFormSection">
                         <Form
                             dataForm={dataContent.form}

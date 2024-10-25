@@ -46,8 +46,8 @@ const ContentSecTxtCenter = ({ contentUrl, imageDesktop = '', imageMobile = '', 
                         src={isMobile ? dataImages.image1 : dataImages.image2}
                         alt="Dolore ipsum working man"
                         priority={true}
-                        width={1030}
-                        height={1030}
+                        width={isMobile ? 1920 : 1920}
+                        height={isMobile ? 1080 : 1080}
                     />
                 </div>
                 : ''}
@@ -63,8 +63,8 @@ const ContentSecTxtCenter = ({ contentUrl, imageDesktop = '', imageMobile = '', 
                                     src={`./images/${dataContent.icon}.svg`}
                                     alt="logo internet"
                                     priority={true}
-                                    width={72}
-                                    height={65}
+                                    width={isMobile ? 48 : 72}
+                                    height={isMobile ? 43 : 65}
                                 />
                             </div>
                             <div className="titleWrapperCenter flex-center">

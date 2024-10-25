@@ -39,15 +39,11 @@
 }
 
 .button-icon:hover .buttonIcon {
-    /* width: 0; */
     display: none;
 }
 
 .button-icon:hover .buttonArrow {
     display: block;
-    /* width: 0;
-    animation: 0.3s moveArrow linear forwards;
-    animation-delay: 0.3s; */
 }
 
 @keyframes moveArrow {

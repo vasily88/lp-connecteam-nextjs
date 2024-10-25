@@ -34,6 +34,7 @@ const HeboSection = ({ title, subtitle, links }) => {
                     src={isMobile ? dataImages.image1 : dataImages.image2}
                     alt="delivery man"
                     fill
+                    priority
                     style={{ objectFit: 'cover' }}
                 />
                 : ''}

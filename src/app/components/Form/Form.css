@@ -53,7 +53,7 @@
 }
 
 .field.half {
-    width: 336px;
+    width: 341px;
 }
 
 .field.full {
@@ -171,8 +171,8 @@ select:focus,
 .containerFields {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 18px;
+    column-gap: 18px;
+    row-gap: 24px;
     margin: 18px 0 0 0;
 }
 
@@ -188,5 +188,26 @@ select:focus,
 
     .btnSelect {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .buttonsForSelect {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .field.field_buttons {
+        height: 128px;
+    }
+
+    .field.field_textarea.full {
+        height: 197px;
+    }
+
+    .messageForm {
+        margin: 10px 0 0 0;
     }
 }

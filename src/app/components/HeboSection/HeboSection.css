@@ -50,6 +50,13 @@
     }
 }
 
+@media only screen and (max-width: 767px) {
+    .button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
 @media only screen and (max-width: 599px) {
     .heboContainerText {
         padding: 0;
@@ -70,7 +77,7 @@
         width: 100%;
         top: 0;
         right: 0;
-        background: linear-gradient(to top, #251600 40%, transparent 100%);
+        background: linear-gradient(to top, #251600 50%, transparent 100%);
     }
 
     .conatinerTopLogo {
@@ -99,11 +106,6 @@
         flex-direction: column;
         margin: 32px 0 0 0;
         padding: 0 24px;
-    }
-
-    .button {
-        width: 100%;
-        box-sizing: border-box;
     }
 
     .heboSection {
