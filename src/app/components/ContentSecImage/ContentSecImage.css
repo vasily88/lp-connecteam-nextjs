@@ -150,6 +150,12 @@
     }
 }
 
+@media only screen and (max-width: 980px) {
+    .contentSection {
+        gap: 10px;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     .contentSection {
         flex-direction: column-reverse;
@@ -157,6 +163,10 @@
 
     .containerText {
         width: 100%;
+    }
+
+    .contentSection {
+        padding: 0;
     }
 
     .containerImage {
