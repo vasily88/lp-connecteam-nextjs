@@ -28,6 +28,7 @@ const HeboSection = ({ title, subtitle, links }) => {
     }, [])
 
     return (
+        // Hebo Section
         <section className='heboSection'>
             {dataImages ?
                 <Image

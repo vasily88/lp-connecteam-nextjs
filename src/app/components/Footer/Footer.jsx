@@ -24,6 +24,7 @@ const Footer = ({ contentUrl }) => {
     }, [])
 
     return (
+        // Footer Container
         <div className='footerContainer flex-center'>
 
             {dataContent ?

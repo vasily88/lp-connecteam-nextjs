@@ -55,8 +55,6 @@ const Form = ({ dataForm }) => {
             </p>
 
             <div className="containerFields">
-
-
                 {
                     dataForm.fields.map((field, index) => {
                         if (field.type === "text") {
