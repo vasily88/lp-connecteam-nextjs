@@ -148,10 +148,6 @@
 
     .menu.sticky {
         height: 121px;
-        height: 161px;
     }
 
-    .menuLogo {
-        transform: translateY(0);
-    }
 }

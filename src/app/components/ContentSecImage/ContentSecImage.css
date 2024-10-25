@@ -176,4 +176,23 @@
     }
 }
 
-@media only screen and (max-width: 599px) {}
+@media only screen and (max-width: 767px) {
+    .contentSection {
+        gap: 24px;
+    }
+
+    .containerText {
+        padding: 0 24px 24px;
+        box-sizing: border-box;
+    }
+
+    .titleWrapper h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .Sit-et-enim .bgLogo {
+        background: inherit !important;
+        opacity: 0;
+    }
+}

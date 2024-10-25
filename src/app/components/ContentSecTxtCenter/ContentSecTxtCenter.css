@@ -21,8 +21,6 @@
 
 }
 
-/* .containerImageCenter img {} */
-
 .containerTextCenter {
     width: 1144px;
     margin: 64px auto;
@@ -84,4 +82,10 @@
 
 .wrapperButtons {
     gap: 18px;
+}
+
+@media only screen and (max-width: 767px) {
+    .contentSectionTxt {
+        margin: 0;
+    }
 }
