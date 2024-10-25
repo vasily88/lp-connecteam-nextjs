@@ -6,6 +6,7 @@ const Buttons = ({ href, label, primary = '', icon, nameArrowIcon }) => {
   return (
     <a
       href={href}
+      aria-label={`link ${label}`}
       target="_blank"
       primary={primary.toString()}
       className={icon ? 'flex-center button button-icon' : 'flex-center button button-arrow'}

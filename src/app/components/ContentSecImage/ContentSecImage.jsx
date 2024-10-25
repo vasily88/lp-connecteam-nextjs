@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import parse from 'html-react-parser';
-// import useDeviceType from '../../utils/useDeviseType';
+import useDeviceType from '../../utils/useDeviseType';
 import { fetchDataContent } from '../../utils/fetchData';
 import { fetchImages } from '../../utils/fetchData';
 import Image from 'next/image';
@@ -12,6 +12,8 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
 
     const [dataContent, setDataContent] = useState(null);
     const [dataImages, setDataImages] = useState(null);
+
+    const isMobile = useDeviceType();
 
     useEffect(() => {
 
@@ -81,8 +83,8 @@ const ContentSecImage = ({ contentUrl, directionLeft, imageDesktop = '', imageMo
                                 src={dataImages.image1}
                                 alt={`${name} image`}
                                 priority={true}
-                                width={440}
-                                height={440}
+                                width={isMobile ? 400 : 440}
+                                height={isMobile ? 400 : 440}
                             />
                             <div className={`conatinerImageLogo flex-center ${positionLogoImage}`}>
                                 <div className='bgLogo' style={{ background: backgroundIconImage }}></div>

@@ -13,7 +13,7 @@ const ButtonArrowScroll = () => {
       duration={500}
     >
 
-      <button className='btnArrowScroll flex-center'>
+      <button aria-label={`button arrow`} className='btnArrowScroll flex-center'>
         {
           arrow.map((arrow, index) => {
             return (

@@ -1,6 +1,7 @@
 :root {
     --color1: #fff;
     --color-ED8E00: #ED8E00;
+    --color-6A6A6A: #6A6A6A;
 }
 
 .btnSubmit {
@@ -41,33 +42,130 @@
 
 .field {
     position: relative;
-    width: 341px;
+    width: 336px;
     height: 48px;
     border-radius: 24px;
     background: #FFFFFF;
-    /* padding: 16px 24px 16px 24px; */
-    border: 1px solid #EAEAEA
+}
+
+.field:focus-within .label {
+    color: var(--color-ED8E00);
+}
+
+.field.half {
+    width: 336px;
+}
+
+.field.full {
+    width: 100%;
+}
+
+.field.field_textarea.full {
+    height: 160px;
+}
+
+.field.field_buttons.full {
+    width: 100%;
 }
 
 .label {
     position: absolute;
     font-weight: 600;
     font-size: 13px;
-    line-height: 13px;
-    top: -7px;
+    top: -1px;
     left: 24px;
     color: #242424;
+    z-index: 1;
+    background: #fff;
+    border-radius: 24px;
+    line-height: 0.2;
 }
 
-.input {
-    position: absolute;
-    left: 24px;
-    top: 13px;
-    font-weight: 600;
+.field_buttons {
+    margin: 24px 0 0 0;
+}
+
+.field_buttons .label {
     font-size: 16px;
     line-height: 16px;
-    border: none;
+    font-weight: 600;
+    top: -22px;
+    background: transparent;
+}
+
+.textarea,
+.select,
+.input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
     width: calc(100% - 48px);
+    height: 100%;
+    padding: 0 24px;
+    border: 1px solid #EAEAEA;
+    border-radius: 24px;
+    color: var(--color-6A6A6A);
+}
+
+.textarea {
+    padding: 24px;
+    height: calc(100% - 48px);
+    line-height: 22px;
+    resize: none;
+}
+
+.buttonsForSelect {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border: 1px solid #EAEAEA;
+    border-radius: 24px;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.btnSelect {
+    width: 230px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-6A6A6A);
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btnSelect:hover,
+.btnSelect.active {
+    color: var(--color-ED8E00);
+    border: 2px solid var(--color-ED8E00)
+}
+
+.select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(/images/select-arrow.svg) no-repeat right 24px center;
+    background-size: 15px;
+}
+
+option {
+    font-size: 16px;
+}
+
+.select::-ms-expand {
+    display: none;
+}
+
+textarea:focus,
+select:focus,
+.input:focus {
+    border: 1px solid var(--color-ED8E00);
 }
 
 .containerFields {
@@ -76,4 +174,19 @@
     column-gap: 24px;
     row-gap: 18px;
     margin: 18px 0 0 0;
+}
+
+@media only screen and (max-width: 1280px) {
+    .containerFields {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .field.half {
+        width: 100%;
+    }
+
+    .btnSelect {
+        width: 100%;
+    }
 }

@@ -133,3 +133,47 @@
     position: relative;
     transform: translateX(3px);
 }
+
+@media only screen and (max-width: 1280px) {
+    .containerImage {
+        left: 0;
+    }
+
+    .contentSection {
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .contentSection {
+        flex-direction: column-reverse;
+    }
+
+    .containerText {
+        width: 100%;
+    }
+
+    .containerImage {
+        width: 100%;
+        height: 400px;
+    }
+
+    .containerImage>img {
+        border-radius: 0;
+    }
+
+    .directionRight .containerImage {
+        left: 0;
+        right: 0;
+    }
+
+    .conatinerImageLogo.conatinerImageLogo {
+        top: 24px;
+        right: -12px;
+        left: unset;
+        bottom: unset;
+        border-radius: 99px 0 0 99px;
+    }
+}
+
+@media only screen and (max-width: 599px) {}

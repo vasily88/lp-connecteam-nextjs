@@ -10,7 +10,7 @@ const Nav = ({name,nameMenu, icon, color}) => {
             smooth={true}
             duration={500}
             >
-                <button className='menuBtn flex-center' style={{background:color+12}} aria-controls="menu">
+                <button aria-label={`button ${name}`} className='menuBtn flex-center' style={{background:color+12}} aria-controls="menu">
                     <Image
                         src={`./images/${icon}.svg`}
                         alt={`logo ${name}`}

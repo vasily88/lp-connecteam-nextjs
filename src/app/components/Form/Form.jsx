@@ -16,9 +16,6 @@ const Form = ({ dataForm }) => {
 
     const [message, setMessage] = useState('');
 
-    console.log("formData:", formData)
-
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -31,11 +28,9 @@ const Form = ({ dataForm }) => {
         if (formData && Object.values(formData).every(field => field.trim() !== "")) {
             setMessage('Form sent successfully!');
             console.log(formData);
-            console.log('success');
         } else {
             setMessage('Form is missing required fields.');
             console.log(formData);
-            console.log('not');
         }
     };
 
@@ -66,9 +61,9 @@ const Form = ({ dataForm }) => {
                     dataForm.fields.map((field, index) => {
                         if (field.type === "text") {
                             return (
-                                <div key={index} className='field text'>
+                                <div key={index} className={`field field_text ${field.size}`}>
                                     <label className='label' htmlFor={`inputTxt${index}`}>
-                                        {field.name}
+                                        {field.name}*
                                     </label>
                                     <input
                                         type="text"
@@ -76,28 +71,27 @@ const Form = ({ dataForm }) => {
                                         name={`inputTxt${index}`}
                                         value={formData[`inputTxt${index}`]}
                                         onChange={handleChange}
-                                        className={`input ${field.size}`}
+                                        className={`input ${field.size} __className_143007`}
+                                        maxLength={25}
                                     />
                                 </div>
                             )
                         } else if (field.type === "options" && field.layout === "select") {
                             return (
-                                <div key={index} className='field select'>
-                                    <label className='label' htmlFor={`options${index}`}>
-                                        {field.name}
-                                    </label>
+                                <div key={index} className={`field field_select ${field.size}`}>
+                                    <label className='label' htmlFor={`options${index}`}></label>
                                     <select
                                         name={`options${index}`}
                                         id={`options${index}`}
                                         value={formData[`options${index}`]}
                                         onChange={handleChange}
-                                        className={`select ${field.size}`}
+                                        className={`select ${field.size} __className_143007`}
                                     >
-                                        <option value="">{field.name}</option>
+                                        <option value="">{field.name}*</option>
                                         {
                                             field.options.map((option, index) => {
                                                 return (
-                                                    <option key={index} value={option.value}>{option.label}</option>
+                                                    <option className='__className_143007' key={index} value={option.value}>{option.label}</option>
                                                 )
                                             })
                                         }
@@ -106,17 +100,17 @@ const Form = ({ dataForm }) => {
                             )
                         } else if (field.type === "options" && field.layout === "buttons") {
                             return (
-                                <div key={index} className='field buttons'>
-                                    <label className='label' htmlFor={`options4${index}`}>
-                                        {field.name}
+                                <div key={index} className={`field field_buttons ${field.size}`}>
+                                    <label className='label' htmlFor={`options${index}`}>
+                                        {field.name}*
                                     </label>
-                                    <div className="buttonsForSelect">
+                                    <div className="buttonsForSelect flex-center">
                                         {
                                             field.options.map((btn, btnIndex) => {
                                                 return (
                                                     <button
                                                         key={btnIndex}
-                                                        className='btnSelect'
+                                                        className='btnSelect flex-center'
                                                         data-value={btn.value}
                                                         onClick={(e) => handleButtonClick(e, index)}
                                                     >
@@ -130,16 +124,17 @@ const Form = ({ dataForm }) => {
                             )
                         } else if (field.type === "textarea") {
                             return (
-                                <div key={index} className='field textarea'>
+                                <div key={index} className={`field field_textarea ${field.size}`}>
                                     <label className='label' htmlFor={`textarea${index}`}>
-                                        {field.name}
+                                        {field.name}*
                                     </label>
                                     <textarea
                                         id={`textarea${index}`}
                                         name={`textarea${index}`}
                                         value={formData[`textarea${index}`]}
                                         onChange={handleChange}
-                                        className={`textarea ${field.size}`}
+                                        className={`textarea ${field.size} __className_143007`}
+                                        maxLength={500}
                                     />
                                 </div>
                             )
@@ -150,7 +145,7 @@ const Form = ({ dataForm }) => {
                 }
             </div>
 
-            <button type="submit" className='btnSubmit flex-center'>
+            <button aria-label={`button send form`} type="submit" className='btnSubmit flex-center'>
                 <span className='__className_ddd55e'>{dataForm.submitLabel}</span>
                 <Image
                     className='buttonArrow'

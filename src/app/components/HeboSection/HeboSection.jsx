@@ -40,13 +40,15 @@ const HeboSection = ({ title, subtitle, links }) => {
 
             <div className='heboContainerText relative'>
 
-                <Image
-                    src='./images/logo_white.svg'
-                    alt="logo"
-                    priority={true}
-                    width={321}
-                    height={60}
-                />
+                <div className="conatinerTopLogo">
+                    <Image
+                        src='./images/logo_white.svg'
+                        alt="logo"
+                        priority={true}
+                        width={isMobile ? 170 : 321}
+                        height={isMobile ? 32 : 60}
+                    />
+                </div>
 
 
                 <h1 className='__className_ddd55e'>
@@ -66,6 +68,7 @@ const HeboSection = ({ title, subtitle, links }) => {
                                     key={index}
                                     href={button.href}
                                     label={button.label}
+                                    aria-label={`button ${button.label}`}
                                     primary={button.primary}
                                     icon={button.icon}
                                     nameArrowIcon="arrow-2"
@@ -78,8 +81,13 @@ const HeboSection = ({ title, subtitle, links }) => {
                 </div>
 
 
-                <ButtonArrowScroll />
+                <div className="btnScrollConatoner">
+                    <ButtonArrowScroll />
+                </div>
+
             </div>
+
+            <div className='heboBgForMobile'></div>
 
         </section>
     )

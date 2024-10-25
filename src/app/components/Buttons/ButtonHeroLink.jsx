@@ -4,7 +4,7 @@ const ButtonHeroLink = ({ href, label, color, nameLink, nameArrow }) => {
     return (
 
 
-        <a href={href} label={label} className="conatinerLink flex-center-left" target="_blank">
+        <a href={href} aria-label={label} className="conatinerLink flex-center-left" target="_blank">
             <span className='__className_ddd55e' style={{ color }}>{nameLink}</span>
             <Image
                 src={`./images/${nameArrow}.svg`}

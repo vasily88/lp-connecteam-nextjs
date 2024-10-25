@@ -71,3 +71,52 @@
     width: 1144px;
     margin: 0 auto;
 }
+
+@media only screen and (max-width: 1280px) {
+    .menu ul {
+        gap: 26px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .menu ul {
+        gap: 5px;
+    }
+
+    .menuBtn span {
+        font-size: 16px;
+    }
+
+    .menuBtn {
+        gap: 4px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .menuBtn span {
+        font-size: 17px;
+    }
+
+    .menuBtn {
+        padding: 0;
+    }
+
+    .menu ul {
+        gap: 24px;
+        width: fit-content;
+    }
+
+    .menuBtn {
+        gap: 6px;
+    }
+
+    .nav {
+        height: 41px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .menu {
+        height: 41px;
+    }
+}
